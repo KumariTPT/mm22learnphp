@@ -1,5 +1,5 @@
 {
-    "name": "kasparsu/learnphp",
+    "name": "KumariTPT/learnphp",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -8,8 +8,8 @@
     },
     "authors": [
         {
-            "name": "Kaspar Martin Suursalu",
-            "email": "kasparsu@gmail.com"
+            "name": "Kristofer Kumari",
+            "email": "kristofer.kumari@tptlive.ee"
         }
     ],
     "require": {
