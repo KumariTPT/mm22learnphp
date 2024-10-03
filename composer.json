@@ -1,5 +1,5 @@
 {
-    "name": "KumariTPT/learnphp",
+    "name": "kumaritpt/mm22learnphp",
     "type": "project",
     "autoload": {
         "psr-4": {
