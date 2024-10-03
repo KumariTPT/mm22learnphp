@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-  <script src="../assets/js/color-modes.js"></script>
+  <script src="/assets/js/color-modes.js"></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     .bd-placeholder-img {
@@ -102,7 +102,7 @@
   <!-- Custom styles for this template -->
   <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="blog.css" rel="stylesheet">
+  <link href="/blog.css" rel="stylesheet">
 </head>
 
 <body>
@@ -210,7 +210,19 @@
               <path d="M21 21l-5.2-5.2" />
             </svg>
           </a>
-          <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          <?php if (auth()): ?>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?=auth()->email?>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          <?php else: ?>
+            <a class="btn btn-sm btn-outline-secondary" href="/register">Sign up</a>
+            <a class="btn btn-sm btn-primary ms-2" href="/login">Login</a>
+          <?php endif; ?>
         </div>
       </div>
     </header>
